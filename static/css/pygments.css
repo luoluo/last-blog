@@ -125,11 +125,13 @@ ul.entries a:hover {
 }
 
 footer {
-  font-size: 9pt;
-  font-style: italic;
-  padding-top: 30pt;
-  rubyt-align: center;
+    clear: both;
+    position: relative;
+    z-index: 10;
+    height: 3em;
+    margin-top: -3em;
 }
+
 body div.content {}
     body div.content code.has-jax {
         font: inherit;

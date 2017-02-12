@@ -1,0 +1,34 @@
+body {
+  font: 15px/1.5 Georgia,"Times New Roman",Times,"Hiragino Sans GB","Hiragino Kaku Gothic Pro","STXihei",Hei,SimSun,"WenQuanYi Micro Hei",sans-serif;
+  padding: 0;
+  background: black;
+  margin: auto;
+  padding: 0;
+  width: 660px;
+}
+
+#Top {
+  background: lightblue;
+  padding: 0px 20px 0px 20px;
+}
+
+#Content {
+  background: white;
+  padding: 10px 20px 10px 20px;
+}
+
+#Bottom {
+  background: lightgray;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+}
+
+.post-title {
+    /* font-size:smaller; */
+    font-size:x-large;
+}
+.post-time{
+    font-size:small;
+}
+.post-content {
+}

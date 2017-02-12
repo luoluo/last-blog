@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset=utf-8 />
+    <!-- TODO -->
+    <title> HEADER </title>
+  </head>
+  <body>
+    <link rel="stylesheet" href="/static/css/base.css" />
+    <div id="Top">
+        <nav role="navigation">
+              <li>
+                <a href="/"> Home </a>
+              </li>
+              <li>
+                <a href="/archives"> Archive </a>
+              </li>
+              <li>
+                <a href="/categories"> Categories</a>
+              </li>
+              <li>
+                <a href="/note"> Note</a>
+              </li>
+              <li>
+                <a href="/about"> About </a>
+              </li>
+        </nav>
+    </div> 
+
+    <div id="Content"> {% block content %}{% endblock %} </div>
+
+    <div id="Bottom">
+        @copy Luoluo 2011-2014 | All Rights Reserved.
+    </div>
+  </body>
+
+</html>
