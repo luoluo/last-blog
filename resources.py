@@ -29,4 +29,4 @@ if __name__ == "__main__":
     resource.load_post()
     for link in resource.post_mapping:
         post = resource.post_mapping[link]
-        print post.title, post.date, link
+        # print post.title, post.date, link
