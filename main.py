@@ -4,8 +4,11 @@ from flask import request
 from flask import render_template
 from flask import url_for
 from flask import redirect
+from resources import Resources
 
 app = Flask(__name__)
+resources = Resources()
+resources.load_post()
 
 @app.route("/about")
 def about():
@@ -14,11 +17,11 @@ def about():
 
 @app.route("/archives/")
 def archives():
-    return render_template("archives.html")
+    return render_template("archives.html", posts=resources.posts())
 
 @app.route("/archives/<string:archive_id>")
 def archive(archive_id):
-    return render_template("post.html")
+    return render_template("post.html", post=resources.get(archive_id))
 
 @app.route("/construct")
 def construct():
@@ -30,7 +33,7 @@ def page_not_found(e):
 
 @app.route("/dev")
 def dev():
-    return render_template("archives.html")
+    return redirect(url_for("archives"))
 
 @app.route("/")
 def hello():

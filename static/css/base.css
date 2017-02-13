@@ -9,12 +9,16 @@ body {
 
 #Top {
   background: lightblue;
-  padding: 0px 20px 0px 20px;
+  padding: 10px 20px 10px 20px;
+}
+
+#Nav {
+  margin: 0px 0px 0px 30px;
 }
 
 #Content {
   background: white;
-  padding: 10px 20px 10px 20px;
+  padding: 10px 20px 20px 30px;
 }
 
 #Bottom {
@@ -31,4 +35,27 @@ body {
     font-size:small;
 }
 .post-content {
+}
+.archive {
+}
+.archive-date {
+    display: inline-block;
+    margin: 0px 20px 0px 20px;
+}
+#tensep {
+    width:10px;
+}
+.archive-link {
+    display: inline-block;
+}
+code {
+    font-family: Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,sans-serif;
+    font-size: small;
+    background-color: #eff0f1;
+}
+pre {
+    display: block;
+    background-color: #eff0f1;
+    width: auto;
+    font-size: 13px;
 }

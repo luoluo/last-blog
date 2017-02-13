@@ -1,10 +1,12 @@
 {% extends "base.html" %}
 
 {% block content %} 
-
-<div class="archive"> 19 Dec 2013 <a href="/archives/1">one piece of archive </a></div>
-<div class="archive"> 19 Dec 2013 <a href="/archives/1">one piece of archive </a></div>
-<div class="archive"> 19 Dec 2013 <a href="/archives/1">one piece of archive </a></div>
-<div class="archive"> 19 Dec 2013 <a href="/archives/1">one piece of archive </a></div>
+{% for post in posts %}
+    <div class="archive"> 
+        <div class="archive-date"> {{post.date}} </div>  
+        <td width="30"> </td> 
+        <div class="archive-link"> <a href="/archives/{{post.link}}"> {{post.title}} </a></div>
+    </div>
+{% endfor %}
 
 {% endblock %}
