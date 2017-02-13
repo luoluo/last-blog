@@ -54,7 +54,7 @@ code {
     background-color: #eff0f1;
 }
 pre {
-    padding-left: 15px;
+    padding: 5px 10px 5px 15px;
     display: block;
     background-color: #eff0f1;
     width: auto;
