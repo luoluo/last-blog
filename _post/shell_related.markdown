@@ -71,8 +71,12 @@ categories: HeadStream
         shift+3  高亮当前代码
         :g/^$/d   去除空行
         %s/xx/&\r/g 换行
+        vim移动窗口位置
+          Control + w && shitf + hjkl
+          vim 在窗口间移动光标 Control + w && hjkl
+        vim 忽略大小写，/simple\c
 
-    sed 
+    sed
         sed 's/[\t]//g' test.txt > out.txt
         sed 's/[\x09]//g' test.txt > out.txt
         sed -e 's/^A/xxx/g' file > newFile
