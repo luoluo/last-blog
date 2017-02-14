@@ -3,7 +3,7 @@ import markdown2
 import frontmatter
 import json
 import hashlib
-import pypandoc
+# import pypandoc
 
 class Post(object):
     """ post
@@ -45,8 +45,8 @@ class Post(object):
         if self.content:
             markdowner = markdown2.Markdown()
             # markdowner.set_output_format("html5")
-            # self.content = markdowner.convert(self.content)
-            self.content = pypandoc.convert(self.content, 'html', format="md")
+            self.content = markdowner.convert(self.content)
+            # self.content = pypandoc.convert(self.content, 'html', format="md")
         self.date = infos.get("date") # TODO
         self.link = hashlib.md5(filename.encode("utf-8")).hexdigest()
 
