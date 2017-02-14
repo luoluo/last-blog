@@ -1,9 +1,9 @@
 ---
 layout: post
 title: shell related wiki
-date: 2014-12-11 22:49
+date: 2014-02-25 13:16
 comments: true
-categories: HeadStream
+categories: WIKI
 ---
 
     常用命令：
