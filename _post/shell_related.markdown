@@ -81,7 +81,7 @@ categories: HeadStream
         iconv -f encoding -t encoding inputfile
         iconv -f GBK -t UTF-8 file1 -o file2
 
-    6. 2>&1 将标准错误输出 输出到标准输出http://www.cnblogs.com/caolisong/archive/2007/04/25/726896.html
+    6. 2>&1 将标准错误输出 输出到标准输出
 
 任务管理：
 
@@ -91,7 +91,8 @@ categories: HeadStream
     &运行命令时，在末尾添加&,使得命令在后台执行
     fg N 将命令进程号码为N的进程，放到前台执行
     bg N将命令进程号码为N的进程，放到后台执行
-    7.source 的作用http://www.ansen.org/2012/04/point-in-the-shell-command-and-the-difference-of-the-source-command.html
+
+    source 作用
     5. date date
         date -d
         date -d "1 day ago" 
@@ -146,8 +147,9 @@ categories: HeadStream
         alter table aka_audit_output_hour change   audit_pipe audit_type string
 
     mysql function
-        select count(distinct idvisit) as counted,
-            FROM_UNIXTIME(TRUNCATE(UNIX_TIMESTAMP(server_time)/900.0,0)*900) as server_time_ed
+        select count(distinct idvisit) AS counted,
+            FROM_UNIXTIME(TRUNCATE(UNIX_TIMESTAMP(server_time)/900.0,0)*900)
+            AS sv_time_d
             FROM visits group by server_time_ed
         select lpad(id, 4, '0000') from t1;
         select substring_index("/test/examplepath/use/rlo/g.txtasdf", '/', 3);
