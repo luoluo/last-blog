@@ -122,7 +122,7 @@ so it simply sticks to itself below the last element that was not *floated*.
         clear: both; /* clear left/right/both */
     }
 
-**hiden overflow:**
+**hidden overflow:**
 
     .content {
         overflow: hidden;
