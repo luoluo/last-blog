@@ -150,3 +150,45 @@ solution. Otherwise, add an overflow: hidden declaration to the container elemen
         flex: 1; /* 1/initial */
     }
 
+### Advanced-positioning:
+
+**positioning scheme**: *static, relative, absolute, fixed*.
+
+**relative-positioning**: moves the elements around *relative* to where they would normally appear in the static flow of the page.
+
+    .item-relative {
+        position: relative;
+        top: 30px; /* bottom: -30px; */
+        left: 30px; /* right: -30px; */
+    }
+
+Relative-positioning works similarly to margin but with one very important difference: neither the surrounding elements or parent element are affected by the `top` and `left` value. Everything renders as if .item-relative was in its original position.
+
+**absolute-positioning** is just like relative-position, but the offset if relative to the entire browser window instead of the original position of the element.
+
+    .item-absolute {
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+
+The other interesting effect is that it completely removes an element from the normal flow of the page.
+
+**relatively absolute**
+Absolute elements is alwasy relative to the closed elements that is a *positioned elements*.
+
+**Fixed elements** has a lot common with absolute positioning: it's very manual, the element is removed from the the normal flow of the page, and the coordinate system is relative to the entire browser window. The key difference is that fixed elements don't scrolled with the rest of page.
+
+    .item-fixed {
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+
+**z-index**: let you control the depth of the elements on the page.
+
+    .dropdown > span {
+        z-index: 2;
+        position: relative; /* This is important */
+    }
+
