@@ -59,6 +59,7 @@ pre {
     display: block;
     background-color: #eff0f1;
     width: auto;
+    overflow: scroll;
     font-size: 13px;
 }
 .math {
