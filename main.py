@@ -17,11 +17,12 @@ def about():
 
 @app.route("/archives/")
 def archives():
-    return render_template("archives.html", posts=resources.posts())
+    return render_template("archives.html", posts=resources.posts(), title="archives")
 
 @app.route("/archives/<string:archive_id>")
 def archive(archive_id):
-    return render_template("post.html", post=resources.get(archive_id))
+    post = resources.get(archive_id)
+    return render_template("post.html", post=post, title=post.title)
 
 @app.route("/construct")
 def construct():
