@@ -158,6 +158,15 @@ categories: WIKI
         select lpad(id, 4, '0000') from t1;
         select substring_index("/test/examplepath/use/rlo/g.txtasdf", '/', 3);
 
+    ssh keep alive login
+    p@o:~$ cat ~/.ssh/config 
+    Host *
+    ServerAliveInterval 60
+    ControlMaster auto
+    ControlPath ~/.ssh/master-%r@%h:%p
+    ControlPersist yes
+
+
 shell语言：
 
     27.目录是否存在
