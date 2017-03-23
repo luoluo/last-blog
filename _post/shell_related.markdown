@@ -166,6 +166,10 @@ categories: WIKI
     ControlPath ~/.ssh/master-%r@%h:%p
     ControlPersist yes
 
+    show user login info:
+    last # Show a list of last logged in user
+    uptime # Tell how long system been running
+
 
 shell语言：
 
