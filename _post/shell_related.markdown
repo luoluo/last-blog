@@ -75,6 +75,13 @@ categories: WIKI
           Control + w && shitf + hjkl
           vim 在窗口间移动光标 Control + w && hjkl
         vim 忽略大小写，/simple\c
+        
+        vim restore the cursor position:
+        " put those line to .vimrc
+        au BufReadPost *
+            \ if line("'\"") > 0 && line("'\"") <= line("$") && &filetype != "gitcommit" |
+                \ execute("normal `\"") |
+            \ endif
 
     sed
         sed 's/[\t]//g' test.txt > out.txt
