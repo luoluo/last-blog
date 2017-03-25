@@ -43,7 +43,7 @@ class Post(object):
         self.title = infos.get("title")
         self.content = infos.get("content")
         if self.content:
-            markdowner = markdown2.Markdown()
+            markdowner = markdown2.Markdown(extras=['tables'])
             # markdowner.set_output_format("html5")
             self.content = markdowner.convert(self.content)
             # self.content = pypandoc.convert(self.content, 'html', format="md")
