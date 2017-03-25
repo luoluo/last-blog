@@ -15,7 +15,6 @@ categories: [HeadStream,  Languages]
 + 2.指针
 + 3.++函数
 
-----    
 
 ###上期答案
     #include <stdio.h>
@@ -104,6 +103,7 @@ categories: [HeadStream,  Languages]
 
 指针算数运算的**自调节机制**：
 >a.*指针在与整型运算前会进行调整，将指针指向类型的大小来与整型相乘，再加。结果为__指针类型__*
+
     #include <stdio.h>
     int main(){
         int a[] = {1, 2, 3};
@@ -114,6 +114,7 @@ categories: [HeadStream,  Languages]
     }
 
 >b.*指针与指针类型算术运算，只有二者指向相同数组，结果才是定义了的。结果为__整型__*
+
     #include <stdio.h>
     int main(){
         int a[] = {1, 2, 3};
@@ -125,6 +126,7 @@ categories: [HeadStream,  Languages]
 
 
 >c.*指针与指针类型关系运算，只有二者指向相同数组，结果才是定义了的。结果为__真或假__*
+
     #include <stdio.h>
     int main(){
         int a[] = {1, 2, 3};

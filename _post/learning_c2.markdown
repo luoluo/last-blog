@@ -15,7 +15,6 @@ categories: [HeadStream,  Languages]
 + 2.运算符
 + 3.函数++
 
-----    
 
 #####上期解答[]
     #include <stdio.h>
