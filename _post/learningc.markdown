@@ -3,7 +3,7 @@ layout: post
 title: "A byte of C"
 date: 2013-03-13 22:22
 comments: true
-categories: [HeadStream,  Languages]
+categories: [Headstream,  Languages]
 ---
 ####目标
 白话C，最短时间内写出简单C程序.
@@ -212,4 +212,4 @@ case 可以有任意多个，要点是注意每个case以break结束，因为一
     {
         ...//代码下期给出    
     }
-[答案戳这里](/HeadStream/Tutorial/How-to/2013/03/16/learningc2/)
+[答案戳这里](/Headstream/Tutorial/How-to/2013/03/16/learningc2/)

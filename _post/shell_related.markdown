@@ -3,7 +3,7 @@ layout: post
 title: shell related wiki
 date: 2014-02-25 13:16
 comments: true
-categories: WIKI
+categories: Wiki
 ---
 
     常用命令：

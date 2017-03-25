@@ -3,7 +3,7 @@ layout: post
 title: "[无穷递归]两面镜子对照的效果"
 date: 2011-12-11 22:49
 comments: true
-categories: HeadStream
+categories: Headstream
 ---
 **两面镜子对照，在其中一面镜子里你能看到多少面镜子？**
 一直有个疑问是两面镜子中间有一盏蜡烛，中间会不会变得越来越亮？ 实际上是不会的,但是光去哪了呢？

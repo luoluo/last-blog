@@ -8,7 +8,7 @@ from resources import Resources
 
 app = Flask(__name__)
 resources = Resources()
-resources.load_post()
+resources.init()
 
 @app.route("/about")
 def about():
@@ -35,6 +35,10 @@ def page_not_found(e):
 @app.route("/dev")
 def dev():
     return redirect(url_for("archives"))
+
+@app.route("/categories")
+def categories():
+    return render_template("categories.html", categories=resources.categories())
 
 @app.route("/")
 def hello():

@@ -3,7 +3,7 @@ layout: post
 title: "BitCoin"
 date: 2013-08-05 19:50
 comments: true
-categories: [HeadStream]
+categories: [Headstream]
 ---
 
 听说“比特币”很久，一直“不明觉厉”，没有去弄清楚到底是什么。近日在网上东一榔头，西一棒槌的找资料，终于有个大概的认识。     

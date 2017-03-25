@@ -3,7 +3,7 @@ layout: post
 title: "从分蛋糕说起"
 date: 2012-06-04 16:04
 comments: true
-categories: [Math, HeadStream]
+categories: [Math, Headstream]
 ---
 ####网友如下求助：
 >如何分配总租值为2700的三个房间，使三人都满意。

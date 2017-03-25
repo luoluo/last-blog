@@ -3,7 +3,7 @@ layout: post
 title: "无0数字系统"
 date: 2013-03-31 10:17
 comments: true
-categories: [HeadStream, Math]
+categories: [Headstream, Math]
 ---
 由现今的考古证据可以推测人类计数的历史至少有五万年，并由此发展导致出数学符号及记数系统的发展。
 

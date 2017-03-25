@@ -14,6 +14,7 @@ class Post(object):
         self.content = ""
         self.uri = ""
         self.link = ""
+        self.categories = []
 
     def load_from_file(self, filename):
         """
@@ -42,6 +43,9 @@ class Post(object):
         infos = infos.to_dict()
         self.title = infos.get("title")
         self.content = infos.get("content")
+        self.categories = infos.get("categories", [])
+        if isinstance(self.categories, str):
+            self.categories = [self.categories]
         if self.content:
             markdowner = markdown2.Markdown(extras=['tables'])
             # markdowner.set_output_format("html5")
@@ -52,7 +56,8 @@ class Post(object):
 
 if __name__ == "__main__":
     p = Post()
-    p.load_from_file("demo.md")
+    p.load_from_file("./_post/regex_in_python.markdown")
+    print p.categories
     # print p.title
     # print p.date
     # print p.content

@@ -3,7 +3,7 @@ layout: post
 title: "最近的一些思考"
 date: 2013-03-11 22:22
 comments: true
-categories: HeadStream
+categories: Headstream
 ---
 ##写在前面
 不知不觉开学两周，状态渐渐回来，好久没有写博客了.

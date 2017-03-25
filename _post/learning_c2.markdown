@@ -3,7 +3,7 @@ layout: post
 title: "A byte of C After"
 date: 2013-03-16 20:42
 comments: true
-categories: [HeadStream,  Languages]
+categories: [Headstream,  Languages]
 ---
 
 ###目标
@@ -140,7 +140,7 @@ categories: [HeadStream,  Languages]
          //-------
     }
 
-[答案戳这里](/HeadStream/Tutorial/How-to/2013/03/17/learningc3/index.html)
+[答案戳这里](/Headstream/Tutorial/How-to/2013/03/17/learningc3/index.html)
 
 下期将有指针、宏、常用函数
 
