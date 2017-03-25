@@ -171,7 +171,6 @@ Most of the *regular expression operations* are available as _module-level funct
     pattern:  10{3}  Found:  1000 at 2 6
     pattern:  10{1,3}  Found:  10 at 0 2
     pattern:  10{1,3}  Found:  1000 at 2 6
-    {% endhighlight %}
 
 ###Character set
 \[a|b\]    \[a-z\]     \[0-9\]   \[a-zA-Z\]
