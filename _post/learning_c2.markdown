@@ -15,29 +15,29 @@ categories: [HeadStream,  Languages]
 + 2.运算符
 + 3.函数++
 
-----	
+----    
 
 #####上期解答[]
     #include <stdio.h>
     int is_prime(int x) // 1
     {
-    	int i;
-    	for(i = 2;i * i < x;i++)
-    		if((x % i) == 0) 
-    			return 0;
-    	return 1;
+        int i;
+        for(i = 2;i * i < x;i++)
+            if((x % i) == 0) 
+                return 0;
+        return 1;
     }
     int main() 
     {
-    	int i, count, sum;
-    	for(i = 500, sum = 0, count = 0;i < 1000;i++){ // 2
-    		if(is_prime(i)){
-    			count++;		
-    			sum += i;
-    		}			
-    	}
-    	printf("There are %d primes, sum is %d\n", count, sum);
-    	return 0;
+        int i, count, sum;
+        for(i = 500, sum = 0, count = 0;i < 1000;i++){ // 2
+            if(is_prime(i)){
+                count++;        
+                sum += i;
+            }            
+        }
+        printf("There are %d primes, sum is %d\n", count, sum);
+        return 0;
     }
 解释两处：1.自己定义的函数`is_prime`用于判断数的素性; 2.for循环的初始部分有错？？NO!逗号运算符[]
 
@@ -50,20 +50,20 @@ categories: [HeadStream,  Languages]
 ####数组 []
     #include <stdio.h>
     int main(){
-    	float scores[6] = {3, 4, 8, 9, 5, 7};//数组的定义
-    	//float scores[] = {3, 4, 8, 9, 5, 7};也可以 
+        float scores[6] = {3, 4, 8, 9, 5, 7};//数组的定义
+        //float scores[] = {3, 4, 8, 9, 5, 7};也可以 
     
-    	float average = 0;
-    	int i;
-    	for(i = 0;i < 6;i++)
-    		average += scores[i];
+        float average = 0;
+        int i;
+        for(i = 0;i < 6;i++)
+            average += scores[i];
     
-    	average /= 6.0;
+        average /= 6.0;
     
-    	for(i = 0;i < 6;i++){
-    		 scores[i] -= average;
-    		 printf("%f\t", scores[i]);
-    	}	
+        for(i = 0;i < 6;i++){
+             scores[i] -= average;
+             printf("%f\t", scores[i]);
+        }    
     }
 
 >上面解答只针对一门成绩，如果有多门呢？ 建立多个数组？？如果可以把名字，学号成绩合起来定义一种类型，处理将简单，直接。
@@ -71,36 +71,36 @@ categories: [HeadStream,  Languages]
 ####结构 struct
     #include <stdio.h>
     int main(){
-    	struct student{		//定义结构类型
-    		char name[20];		
-    		int id;
-    		float score1, score2;
-    	}; //此处分号不要丢
-    	struct student s1 = {"Lili", 201006, 5.5, 6.6};  //定义一个结构变量
-    	printf("name:%s id:%d score:%f %f\n", s1.name, s1.id, s1.score1, s1.score2);
+        struct student{        //定义结构类型
+            char name[20];        
+            int id;
+            float score1, score2;
+        }; //此处分号不要丢
+        struct student s1 = {"Lili", 201006, 5.5, 6.6};  //定义一个结构变量
+        printf("name:%s id:%d score:%f %f\n", s1.name, s1.id, s1.score1, s1.score2);
     
-    	struct student stu[6] = {		//定义结构数组
-    			{"Lili", 201001, 5.5, 6.6},
-    			{"Lilk", 201002, 5.5, 2.6},
-    			{"Lile", 201003, 8.5, 9.6},
-    			{"Lils", 201004, 9.5, 8.6},
-    			{"Lilz", 201005, 3.5, 2.6},
-    			{"Lilw", 201006, 2.5, 8.6}
-    							};
-    	int i;
-    	float aver1, aver2;
-    	for(i = 0, aver1 = 0, aver2 = 0;i < 6;i++){
-    		aver1 += stu[i].score1;		
-    		aver2 += stu[i].score2;		
-    	}
-    	aver1 /= 6.0;
-    	aver2 /= 6.0;
-    	for(i = 0;i < 6;i++){
-    		stu[i].score1 -= aver1; 
-    		stu[i].score2 -= aver2;
-    	}
-    	for(i = 0;i < 6;i++)
-    		printf("name:%s id:%d stucore:%f %f\n", stu[i].name, stu[i].id, stu[i].score1, stu[i].score2);
+        struct student stu[6] = {        //定义结构数组
+                {"Lili", 201001, 5.5, 6.6},
+                {"Lilk", 201002, 5.5, 2.6},
+                {"Lile", 201003, 8.5, 9.6},
+                {"Lils", 201004, 9.5, 8.6},
+                {"Lilz", 201005, 3.5, 2.6},
+                {"Lilw", 201006, 2.5, 8.6}
+                                };
+        int i;
+        float aver1, aver2;
+        for(i = 0, aver1 = 0, aver2 = 0;i < 6;i++){
+            aver1 += stu[i].score1;        
+            aver2 += stu[i].score2;        
+        }
+        aver1 /= 6.0;
+        aver2 /= 6.0;
+        for(i = 0;i < 6;i++){
+            stu[i].score1 -= aver1; 
+            stu[i].score2 -= aver2;
+        }
+        for(i = 0;i < 6;i++)
+            printf("name:%s id:%d stucore:%f %f\n", stu[i].name, stu[i].id, stu[i].score1, stu[i].score2);
     }
 
 -----
@@ -121,14 +121,14 @@ categories: [HeadStream,  Languages]
 
     #include <stdio.h>
     int f(int x){
-    	if(x <= 1) //递归返回边界
-    		return 1;
-    	else return x * f(x -1);
+        if(x <= 1) //递归返回边界
+            return 1;
+        else return x * f(x -1);
     }
     int main()
     {
-    	printf("%d\n", f(6));
-    	return 0;
+        printf("%d\n", f(6));
+        return 0;
     }
 递归就是函数调用本身，递归一定有返回边界；
 
@@ -138,7 +138,7 @@ categories: [HeadStream,  Languages]
 >写出求斐波那契数的函数fib(n)
 
     int fib(int n){
-     	//-------
+         //-------
     }
 
 [答案戳这里](/HeadStream/Tutorial/How-to/2013/03/17/learningc3/index.html)
