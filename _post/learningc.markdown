@@ -3,7 +3,7 @@ layout: post
 title: "A byte of C"
 date: 2013-03-13 22:22
 comments: true
-categories: [Headstream,  Languages]
+categories: [Headstream,  C]
 ---
 ####目标
 白话C，最短时间内写出简单C程序.

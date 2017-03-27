@@ -3,7 +3,7 @@ layout: post
 title: "A byte of C After"
 date: 2013-03-16 20:42
 comments: true
-categories: [Headstream,  Languages]
+categories: [Headstream,  C]
 ---
 
 ###目标
