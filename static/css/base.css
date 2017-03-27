@@ -78,12 +78,8 @@ sup {
 }
 
 .category-tag {
-    display: inline-block;
-    margin: 0px 20px 0px 20px;
-    width: 125px;
+  padding: 0px 20px 0px 20px;
 }
 .category-detail {
-    display: inline-block;
-    margin: 0px 20px 0px 20px;
-    width: 125px;
+  padding: 0px 20px 0px 20px;
 }
