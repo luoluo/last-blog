@@ -3,7 +3,7 @@ layout: post
 title: "Regex In Python"
 date: 2013-07-17 13:14
 comments: true
-categories: [Skill, Languages]
+categories: [Tools, Python]
 ---
 
 Regex is a important tool when dealing text. In `python` we have a library named `re`.  
