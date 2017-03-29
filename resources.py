@@ -10,6 +10,7 @@ class Resources(object):
         self.post_pattern = "*markdown"
         self.post_mapping = {}
         self.categories_mapping = collections.defaultdict(list)
+        self.notes = None
 
     def load_post(self):
         """ load post
@@ -20,6 +21,12 @@ class Resources(object):
             # self.posts.append(post)
             self.post_mapping[post.link] = post
 
+    def load_note(self):
+        """ load note
+        """
+        self.notes = Post()
+        self.notes.load_from_file(self.post_path + "note/note.markdown")
+
     def make_categories(self):
         for post in self.post_mapping.values():
             for category in post.categories:
@@ -27,7 +34,11 @@ class Resources(object):
 
     def init(self):
         self.load_post()
+        self.load_note()
         self.make_categories()
+
+    def get_note(self):
+        return self.notes
 
     def get(self, link):
         return self.post_mapping.get(link)

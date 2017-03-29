@@ -40,6 +40,11 @@ def dev():
 def categories():
     return render_template("categories.html", categories=resources.categories())
 
+@app.route("/notes")
+def notes():
+    post = resources.get_note()
+    return render_template("post.html", post=post)
+
 @app.route("/")
 def hello():
     #return redirect(url_for("construct"))
