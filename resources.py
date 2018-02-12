@@ -1,5 +1,6 @@
 import glob
 import collections
+import os
 from post import Post
 
 class Resources(object):
