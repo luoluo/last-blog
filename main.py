@@ -13,7 +13,8 @@ resources.init()
 @app.route("/about")
 def about():
     # return render_template("about.html")
-    return redirect(url_for("construct"))
+    post = resources.get_about()
+    return render_template("post.html", post=post)
 
 @app.route("/archives/")
 def archives():
