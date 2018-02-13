@@ -12,4 +12,5 @@ categories: []
 ![](/static/img/icon_github.svg) [github](https://github.com/luoluo)     
 ![](/static/img/icon_stackoverflow.svg ) [stackoverflow](https://stackoverflow.com/users/1099230/luoluo)    
 ![](/static/img/icon_douban.svg) [douban](https://www.douban.com/people/luoluo1920/)        
-![](/static/img/icon_email.svg) [luoluo1920#gmail#com]()
+![](/static/img/icon_email.svg) [luoluo1920#gmail#com]()    
+![](/static/img/icon_wechat.svg) [Vxiaolaofu]()    
