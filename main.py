@@ -14,7 +14,7 @@ resources.init()
 def about():
     # return render_template("about.html")
     post = resources.get_about()
-    return render_template("post.html", post=post)
+    return render_template("post.html", post=post, title="about")
 
 @app.route("/archives/")
 def archives():
@@ -39,12 +39,12 @@ def dev():
 
 @app.route("/categories")
 def categories():
-    return render_template("categories.html", categories=resources.categories())
+    return render_template("categories.html", categories=resources.categories(), title="categories")
 
 @app.route("/notes")
 def notes():
     post = resources.get_note()
-    return render_template("post.html", post=post)
+    return render_template("post.html", post=post, title="notes")
 
 @app.route("/")
 def hello():
