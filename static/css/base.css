@@ -83,3 +83,10 @@ sup {
 .category-detail {
   padding: 0px 20px 0px 20px;
 }
+
+.content-image {
+  max-width: 100%;
+}
+.image-div {
+    width: 610px;
+}
