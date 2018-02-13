@@ -1,7 +1,7 @@
 ---
 layout: post
-title: shell related wiki
-date: 2014-02-25 13:16
+title: "Linux shell 总结"
+date: 2018-02-13 13:16
 comments: true
 categories: Wiki
 ---
