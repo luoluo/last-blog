@@ -6,17 +6,17 @@ comments: true
 categories: [Headstream,  C]
 ---
 
-###目标
-白话C，最短时间内写出简单C程序.
-**进阶篇**
+目标  
+白话C，最短时间内写出简单C程序(*进阶篇*)
 
-####关键字
+关键字  
+
 + 1.数据聚合
 + 2.运算符
 + 3.函数++
 
+上期解答[问题传送门](/archives/learningc.markdown)
 
-#####上期解答[]
     #include <stdio.h>
     int is_prime(int x) // 1
     {
@@ -38,15 +38,17 @@ categories: [Headstream,  C]
         printf("There are %d primes, sum is %d\n", count, sum);
         return 0;
     }
-解释两处：1.自己定义的函数`is_prime`用于判断数的素性; 2.for循环的初始部分有错？？NO!逗号运算符[]
 
----
+解释两处：  
+1.自己定义的函数`is_prime`用于判断数的素性;  
+2.for循环的初始部分有错？？NO!逗号运算符[]   
 
-####数据聚合
+数据聚合
 >问题：已知每个人的成绩，求每个人与平均分间的差。
-如果只有几个人，可以定义几个变量解决问题。可是若有成百上千的个体，定义变量使用将是多么痛苦。**数组**应运而生，数组是解决同类个体聚合的利器。
+如果只有几个人，可以定义几个变量解决问题。可是若有成百上千的个体，定义变量使用将是多么痛苦。`数组`应运而生，数组是解决同类个体聚合的利器。
 
 ####数组 []
+
     #include <stdio.h>
     int main(){
         float scores[6] = {3, 4, 8, 9, 5, 7};//数组的定义
@@ -65,9 +67,10 @@ categories: [Headstream,  C]
         }    
     }
 
->上面解答只针对一门成绩，如果有多门呢？ 建立多个数组？？如果可以把名字，学号成绩合起来定义一种类型，处理将简单，直接。
+上面解答只针对一门成绩，如果有多门呢？ 建立多个数组？？如果可以把名字，学号成绩合起来定义一种类型，处理将简单，直接。
 
 ####结构 struct
+
     #include <stdio.h>
     int main(){
         struct student{        //定义结构类型
@@ -102,21 +105,19 @@ categories: [Headstream,  C]
             printf("name:%s id:%d stucore:%f %f\n", stu[i].name, stu[i].id, stu[i].score1, stu[i].score2);
     }
 
------
 
 #### 运算符
 
-#####注意几点
+注意几点   
+
 + 1.位运算(& | ^)符优先级**高于**逻辑运算符(&& || );
 + 2.取模运算符(%) 的两个操作数都要是 **整型** ;
 + 3.运算符用于构成表达式,*表达式产生值*;
 + 4.赋值运算符(=),赋值表达式产生值，结合型自右向左;
 + 5.函数调用也是表达式(上表不全),表达式产生值。
 
----
-
 ####函数(递归)
->阶乘的计算。
+阶乘的计算
 
     #include <stdio.h>
     int f(int x){
@@ -129,18 +130,17 @@ categories: [Headstream,  C]
         printf("%d\n", f(6));
         return 0;
     }
+
 递归就是函数调用本身，递归一定有返回边界；
 
----
-
 ####小结，有码有真相
->写出求斐波那契数的函数fib(n)
+写出求斐波那契数的函数fib(n)
 
     int fib(int n){
          //-------
     }
 
-[答案戳这里](/Headstream/Tutorial/How-to/2013/03/17/learningc3/index.html)
+[答案戳这里](/archives/learning_c3.markdown)
 
 下期将有指针、宏、常用函数
 

@@ -6,7 +6,7 @@ comments: true
 categories: Wiki
 ---
 
-    常用命令：
+    常用命令汇总：
 
     文本处理：
     cat
@@ -23,13 +23,6 @@ categories: Wiki
     echo
     printf
 
-    任务管理：
-    ctrl + z/c/r/b/f
-    jobs/fg/bg
-    source
-    date
-    xargs
-
     文件处理：
     ls
     ln
@@ -40,6 +33,13 @@ categories: Wiki
     file
     ldd
     iconv
+
+    任务管理：
+    ctrl + z/c/r/b/f
+    jobs/fg/bg
+    source
+    date
+    xargs
 
     系统处理：
     sudo
@@ -88,42 +88,55 @@ categories: Wiki
         sed 's/[\x09]//g' test.txt > out.txt
         sed -e 's/^A/xxx/g' file > newFile
 
-    示例单个文件转换
+    iconv
         iconv -f encoding -t encoding inputfile
         iconv -f GBK -t UTF-8 file1 -o file2
 
-    6. 2>&1 将标准错误输出 输出到标准输出
+	grep/awk # TODO
+
 
 任务管理：
 
-    进程前后台操作相关Ctrl+C 退出前台命令执行，回到shell
-    Ctrl+Z 暂停前台命令执行，回到shell
-    jobs 查看当前在后台执行命令，可查看进程号码
-    &运行命令时，在末尾添加&,使得命令在后台执行
-    fg N 将命令进程号码为N的进程，放到前台执行
-    bg N将命令进程号码为N的进程，放到后台执行
+    进程前后台操作相关:
+		Ctrl + C 	# 退出前台命令执行，回到shell
+    	Ctrl + Z 	# 暂停前台命令执行，回到shell
+    	jobs 		# 查看当前在后台执行命令，可查看进程号码
+    	&			# 运行命令时，在末尾添加&,使得命令在后台执行
+    	fg N 		# 将命令进程号码为N的进程，放到前台执行
+    	bg N		# 将命令进程号码为N的进程，放到后台执行
+		2>&1 		# 将标准错误输出 输出到标准输出
+		nohup		# 使程序后台执行，并忽略HUP信号（用户注销，网络端口引起）
 
-    source 作用
-    5. date date
+    date
         date -d
         date -d "1 day ago" 
         date -d "1 day ago" +%Y%m%d
         date +%Y%m%d
         date --date='20140902 2 day' +%Y%m%d
         date --date='20140902 2 days ago' +%Y-%m-%d
-    34. source 和 .  
+
+    source
+    	source demo.sh 	# 逐行读取demo.sh并逐行执行，在当前shell环境中
+    	. demo.sh 		# 与source demo.sh等同
+    	./demo.sh 		# 将demo.sh当做可执行文件，并建立新shell环境来执行
 
 文件处理：
 
-    1.文件压缩解压 tar -zcvf 
-    2.链接文件
-        ln -s path/to/file linkName
-        unlink linkName
+    文件压缩解压
+		tar -zcvf xx.tgz xx 	# 将xx压缩至xx.tgz，xx可以为一批文件
+		tar -zxvf xx.tgz		# 解压xx.tgz
+		unzip xx.tar.bz2
+		bzip2 -d xx.tar.bz2 => xx.tar
+		tar -xvf  xx.tar => xx
+
+    链接文件
+        ln -s path/to/file linkName # 建立指向路径path/to/file的软链
+        unlink linkName				# 
         rm linkName
         ln -rf linkName
         Not!!! ln -fr linkName/
 
-    3.查找制定文件
+    文件查找
         find start_path -name file_to_find
         find /home/work -name my.sh
         find . -name "*py" | xargs cat | wc -l
@@ -133,20 +146,32 @@ categories: Wiki
         find . -name "*.md5" -exec md5sum -c {} \;
         find . -name "*.md5" | xargs -i md5sum -c {}
 
+	文件传输：
+        lftp -u user,pwd host:/path/to/file	# 查看带user/pwd的内容
+        wget --ftp-user=xxx --ftp-password=xxx ftp://host:/path/to/file # 指明user、passwd
+        wget --no-check-certificate ftp://host:/path/to/file # 不验证https安全性
+		scp local_file remote_username@remote_ip:remote_folder
+		scp -r local_dir remote_username@remote_ip:remote_folder
 
-文件传输：
-
-    46.下载、查看带user/pwd的内容
-        lftp -u user,pwd host:/path/to/file
-        wget --ftp-user=xxx --ftp-password=xxx ftp://host:/path/to/file
-        wget --no-check-certificate xxx
-
-
-系统处理：
+系统状态：
 
     show machine hardware info
         lscpu
-        cat /proc/meminfo
+        cat /proc/meminfo		# 空闲内存情况
+		cat /etc/redhat-release # 查看centos版本
+		cat /etc/issue 	 		# 查看centos版本
+		free -h					# 空闲内存情况
+      
+
+    show user login info:
+    	last 	# Show a list of last logged in user
+    	uptime 	# Tell how long system been running
+
+	添加用户
+		sudo adduser thegeek    
+
+
+Mysql相关：
 
     mysql dump
         mysqldump -u root -ppassword tablename --no-data > tablename.sql
@@ -165,67 +190,75 @@ categories: Wiki
         select lpad(id, 4, '0000') from t1;
         select substring_index("/test/examplepath/use/rlo/g.txtasdf", '/', 3);
 
-    ssh keep alive login
-    p@o:~$ cat ~/.ssh/config 
-    Host *
-    ServerAliveInterval 60
-    ControlMaster auto
-    ControlPath ~/.ssh/master-%r@%h:%p
-    ControlPersist yes
-
-    show user login info:
-    last # Show a list of last logged in user
-    uptime # Tell how long system been running
-
 
 shell语言：
 
-    27.目录是否存在
+    目录是否存在
     if [ -d "$DIRECTORY" ]; then
       # Control will enter here if $DIRECTORY exists.
     fi
 
-    28.shell 获取命令的输出值
+    shell 获取命令的输出值
     count=$(ls |　wc -l)
 
-    30. shell 的参数 $# 参数个数  $1 $2 .. $n 第一、第二、第n个参数
+    shell 的参数
+		$# 参数个数  
+		$1 $2 .. $n 第一、第二、第n个参数
 
-    31. '' 与 "" 的区别 
+    '' 与 "" 的区别 
 
-    32. 数组 shell里变量的类型不是特别明确，字符串和变量可以混用，关键是看参与什么运算；
-    so 数组可以用字符串来表示  days="1 2 3 4 5"
-    for day in days;do
-         echo $day;
-    done
+    数组
+		shell里变量的类型不是特别明确，字符串和变量可以混用，关键是看参与什么运算；
+    	数组可以用字符串来表示  
+		days="1 2 3 4 5"
+    	for day in days;do
+         	echo $day;
+    	done
 
-    33. write to 和 write append  <==>    > 和 >>
+    	## declare an array variable
+    	declare -a arr=("element1" "element2" "element3")
+    	## now loop through the above array
+    	for i in "${arr[@]}"do
+    	    echo "$i"
+    	# or do whatever with individual element of the array
+		done
+
+	> 和 >>
+    	> 	# write to，清除旧内容
+		>> 	# write append，不清除旧内容 
  
-    35. sleep
-         sleep <nubmer>s/m/h/d   #sleep number秒/分钟/小时/天 
+    sleep
+    	sleep <nubmer>s/m/h/d   #sleep number秒/分钟/小时/天 
     
-    40.执行一条字符串
-    cmd="date +Y%m%d"
-    eval $cmd
-    val=$(eval $cmd)
+    执行一条字符串
+    	cmd="date +Y%m%d"
+    	eval $cmd
+    	val=$(eval $cmd)
 
-    63. shell array
-    ## declare an array variable
-    declare -a arr=("element1" "element2" "element3")
 
-    ## now loop through the above array
-    for i in "${arr[@]}"do
-        echo "$i"
-    # or do whatever with individual element of the arraydone
+    printf与echo
+		printf会对\n做转义的echo
+    	echo -e "Hello\nworld"
+    	echo -e 'Hello\nworld'
+    	echo Hello$'\n'world
+    	echo $'hello\nworld'
+    	printf "hello\nworld\n"
 
-    64 printf 会对\n做转义的echo
-    echo -e "Hello\nworld"
-    echo -e 'Hello\nworld'
-    echo Hello$'\n'world
-    echo $'hello\nworld'
-    printf "hello\nworld\n"
+    base64 in terminal
+    	openssl enc -base64 <<< fengkong-hadoop #hadoop的密码居然不能有等号
+    	openssl enc -base64 <<< fengkonghadoop
+    	echo `echo xxxx | base64 --decode`
 
-    65.base64 in terminal
-    openssl enc -base64 <<< fengkong-hadoop #hadoop的密码居然不能有等号
-    openssl enc -base64 <<< fengkonghadoop
-    echo `echo xxxx | base64 --decode`
+小技巧：
+
+    ssh keep alive login
+    	o@o:~$ cat ~/.ssh/config 
+    	Host *
+    	ServerAliveInterval 60
+    	ControlMaster auto
+    	ControlPath ~/.ssh/master-%r@%h:%p
+    	ControlPersist yes
+
+	ssh-keygen 
+		ssh key生成
 
