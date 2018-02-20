@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Hive回忆录"
-date: 2018-02-19 10:40
+date: 2018-02-20 08:45
 comments: true
 categories: [BigData, Note]
 ---
@@ -133,6 +133,59 @@ HiveQL——UDF/UDAF/UDTF
 		Explode
 		posexplode
 
+
+####实现细节
+
+HiveQL——Join
+
+	INSERT OVERWRITE TABLE pv_users 
+		SELECT pv.pageid, u.age
+			FROM page_view pv
+		JOIN user u
+		ON (pv.userid = u.userid);
+
+<div class="image-div"> <img class="content-image" src="/static/img/hive2.png" alt="x" /> </div>
+
+HiveQL——Group By
+
+	SELECT pageid, age, count(1) 
+		FROM pv_users
+	GROUP BY pageid, age;
+
+<div class="image-div"> <img class="content-image" src="/static/img/hive3.png" alt="x" /> </div>
+
+####架构
+
+架构总览
+
+<div class="image-div"> <img class="content-image" src="/static/img/hive4.png" alt="x" /> </div>
+
++ UI: 用户接口，提交query和操作
++ Driver: 接收query，处理会话
++ Complier: 处理query，query语法分析
++ Executor: 执行Complier生成的执行计划
++ MetaStore: 存储结构化信息，字段含义、序列化信息、存储路径
+
+详细任务流
+
+<div class="image-div"> <img class="content-image" src="/static/img/hive5.png" alt="x" /> </div>
+
+Metastore
+
++ 特性
++ + 数据抽象
++ + 数据检索
++ Metastore 对象
++ + Database 对table的命名空间
++ + Table 表的元信息(列信息，存储、序列化)
++ + Partition 分片信息
++ 模式
++ + Local/Embedded Metastore Database (Derby)
++ + Remote Metastore Database
+
+####与传统数据库对比
+
+<div class="image-div"> <img class="content-image" src="/static/img/hive6.png" alt="x" /> </div>
 
 ####相关项目
 
