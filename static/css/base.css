@@ -1,10 +1,24 @@
+
 body {
   font: 15px/1.5 Georgia,"Times New Roman",Times,"Hiragino Sans GB","Hiragino Kaku Gothic Pro","STXihei",Hei,SimSun,"WenQuanYi Micro Hei",sans-serif;
   padding: 0;
   background: black;
   margin: auto;
   padding: 0;
-  width: 660px;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 400px) {
+  body {
+  	width: 100%;
+  }
+}
+
+/* Mobile Styles */
+@media only screen and (min-width: 401px) {
+  body {
+  	width: 660px;
+  }
 }
 
 #Top {
@@ -88,5 +102,5 @@ sup {
   max-width: 100%;
 }
 .image-div {
-    width: 610px;
+  max-width: 100%;
 }
