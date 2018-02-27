@@ -47,5 +47,3 @@ INFJ型的人生活在思想的世界里。他们是独立的、有独创性的�
 + 音乐家
 + 艺术顾问
 + 设计师
-
-测试网址：<a herf="http://www.psytopic.com/" title="http://www.psytopic.com/">MBTJ测试</a>
