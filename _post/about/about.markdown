@@ -14,3 +14,5 @@ categories: []
 ![](/static/img/icon_douban.svg) [douban](https://www.douban.com/people/luoluo1920/)        
 ![](/static/img/icon_email.svg) [luoluo1920#gmail#com]()    
 ![](/static/img/icon_wechat.svg) [Vxiaolaofu]()    
+
+__*Things worth doing typically take time and effort*__
