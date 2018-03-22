@@ -64,3 +64,8 @@ categories: [Tools, Skill]
 	5. (gdb) bt              # 打印栈信息
 	6. thread apply [thread-id-list] [all] args   # 打印出所有进程的情况
 
+####5.gdb代码搜索路径
+
+	1. directory 			 		# 重置源码路径为默认值('$cdir:$cwd')
+	2. set directories path-list	# 添加path-list到搜索路径
+	3. show directories				# 打印当前搜索路径
