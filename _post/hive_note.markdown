@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Hive回忆录"
+title: "Apache Hive数据仓库"
 date: 2018-02-20 08:45
 comments: true
 categories: [BigData, Note]
