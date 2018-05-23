@@ -54,7 +54,7 @@ class Post(object):
             # self.content = pypandoc.convert(self.content, 'html', format="md")
         self.date = infos.get("date") # TODO
         _, filename = os.path.split(filename)
-        self.link = filename
+        self.link = filename.replace('.markdown', '.html')
 
 if __name__ == "__main__":
     p = Post()
