@@ -1,2 +1,0 @@
-# last-blog
-last-blog
