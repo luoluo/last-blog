@@ -61,6 +61,9 @@ class Resources(object):
     def categories(self):
         return [(k, v) for k, v in self.categories_mapping.items()]
 
+	def static_dump(self):
+		pass
+
 if __name__ == "__main__":
     resource = Resources()
     resource.init()
